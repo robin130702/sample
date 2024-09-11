@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 import auth
 app = FastAPI()
 app.include_router(auth.router)
-
+##include_router is used to authenticate router.app in database
 models.Base.metadata.create_all(bind=engine)
 def get_db():
     db = SessionLocal()
